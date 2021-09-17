@@ -1,0 +1,6 @@
+USE [db_ayni_personal_servidorpublico]
+GO
+
+insert into [dbo].[otra_instancia] (ID_OTRA_INSTANCIA, ID_UNIDAD_EJECUTORA, CODIGO_OTRA_INSTANCIA, DESCRIPCION_OTRA_INSTANCIA, ACTIVO, FECHA_CREACION, USUARIO_CREACION, IP_CREACION) values(NEXT VALUE FOR [dbo].[seq_otra_instancia], 12, '000000', 'MINEDU', 1, GETDATE(), 'ADMIN', 'SISTEMAS')
+
+GO

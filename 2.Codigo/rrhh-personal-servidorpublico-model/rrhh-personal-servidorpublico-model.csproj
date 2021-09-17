@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	<RootNamespace>minedu.rrhh.personal.servidorpublico.model</RootNamespace>
+	<Version>1.1.0</Version>
+	<AssemblyName>rrhh-personal-servidorpublico-model-$(Version)</AssemblyName>
+  </PropertyGroup>
+
+</Project>

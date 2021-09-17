@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	<RootNamespace>minedu.rrhh.personal.servidorpublico.dao.imp</RootNamespace>
+	<Version>1.1.0</Version>
+	<AssemblyName>rrhh-personal-servidorpublico-dao-imp-$(Version)</AssemblyName>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-common\rrhh-personal-servidorpublico-common.csproj" />
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-dao-intf\rrhh-personal-servidorpublico-dao-intf.csproj" />
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-model\rrhh-personal-servidorpublico-model.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="rrhh-negocio-comunes-rabbitmq-lib-1.0.0">
+		  <HintPath>c:\apps\rrhh-negocio-comunes-rabbitmq-lib\netstandard2.1\rrhh-negocio-comunes-rabbitmq-lib-1.0.0.dll</HintPath>
+		</Reference>
+		<Reference Include="tecnologia-util-lib-1.0.0">
+			<HintPath>c:\apps\tecnologia-util-lib\netstandard2.1\tecnologia-util-lib-1.0.0.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>minedu.rrhh.personal.servidorpublico.backend</RootNamespace>
+	<Version>1.1.0</Version>
+	<AssemblyName>rrhh-personal-servidorpublico-backend-$(Version)</AssemblyName>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>C:\apps\rrhh-personal-servidorpublico-backend</OutputPath>
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Elastic.CommonSchema.Serilog" Version="1.5.3" />
+		<PackageReference Include="Jaeger" Version="1.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" ExcludeAssets="All" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+		<PackageReference Include="System.Text.Encodings.Web" Version="5.0.1" />
+		<PackageReference Include="System.Text.Json" Version="5.0.2" />
+		<PackageReference Include="Microsoft.Extensions.ObjectPool" Version="5.0.7" />
+		<PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="5.0.7" />
+		<PackageReference Include="AspNetCore.HealthChecks.System" Version="5.0.1" />
+		<PackageReference Include="System.Threading.Tasks.Dataflow" Version="5.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="tecnologia-util-lib-1.0.0">
+			<HintPath>C:\apps\tecnologia-util-lib\netstandard2.1\tecnologia-util-lib-1.0.0.dll</HintPath>
+		</Reference>
+		<Reference Include="tecnologia-web-lib-1.0.0">
+			<HintPath>C:\apps\tecnologia-web-lib\netcoreapp3.1\tecnologia-web-lib-1.0.0.dll</HintPath>
+		</Reference>
+		<Reference Include="tecnologia-tracing-jaeger-lib-1.0.0">
+			<HintPath>c:\apps\tecnologia-tracing-jaeger-lib\netcoreapp3.1\tecnologia-tracing-jaeger-lib-1.0.0.dll</HintPath>
+		</Reference>
+		<Reference Include="tecnologia-messaging-rabbitmq-lib-1.0.0">
+			<HintPath>c:\apps\tecnologia-messaging-rabbitmq-lib\netstandard2.1\tecnologia-messaging-rabbitmq-lib-1.0.0.dll</HintPath>
+		</Reference>
+		<Reference Include="rrhh-negocio-comunes-rabbitmq-lib-1.0.0">
+			<HintPath>c:\apps\rrhh-negocio-comunes-rabbitmq-lib\netstandard2.1\rrhh-negocio-comunes-rabbitmq-lib-1.0.0.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-common\rrhh-personal-servidorpublico-common.csproj" />
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-model\rrhh-personal-servidorpublico-model.csproj" />
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-service-imp\rrhh-personal-servidorpublico-service-imp.csproj" />
+	  <ProjectReference Include="..\rrhh-personal-servidorpublico-service-intf\rrhh-personal-servidorpublico-service-intf.csproj" />
+	</ItemGroup>
+</Project>

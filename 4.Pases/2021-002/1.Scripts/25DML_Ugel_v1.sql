@@ -1,0 +1,11 @@
+
+use   db_ayni_personal_servidorpublico
+
+go 
+
+UPDATE ugel set ES_UGEL = 1 WHERE CODIGO_UGEL NOT IN ('0309252','0209973','0544965','0452581','0512251','1062439')
+UPDATE ugel set ES_UGEL = 0 WHERE CODIGO_UGEL IN ('0309252','0209973','0544965','0452581','0512251','1062439')
+
+
+
+
